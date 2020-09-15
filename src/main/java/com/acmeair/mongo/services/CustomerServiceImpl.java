@@ -143,7 +143,7 @@ public class CustomerServiceImpl extends CustomerService implements MongoConstan
   private Document parseCustomerInfo(CustomerInfo customerInfo) {
     return new Document("_id", customerInfo.get_id())
             .append("password", customerInfo.getPassword())
-            .append("status", customerInfo.getPassword())
+            .append("status", customerInfo.getStatus())
             .append("total_miles", customerInfo.getTotal_miles()).append("miles_ytd", customerInfo.getMiles_ytd())
             .append("address", parseAddressInfo(customerInfo.getAddress()))
             .append("phoneNumber", customerInfo.getPhoneNumber())
