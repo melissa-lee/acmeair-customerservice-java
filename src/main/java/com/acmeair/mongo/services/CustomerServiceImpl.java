@@ -17,7 +17,6 @@
 package com.acmeair.mongo.services;
 
 import com.acmeair.mongo.ConnectionManager;
-import com.acmeair.mongo.MongoConstants;
 import com.acmeair.service.CustomerService;
 import com.acmeair.web.dto.AddressInfo;
 import com.acmeair.web.dto.CustomerInfo;
@@ -37,7 +36,7 @@ import static com.mongodb.client.model.Updates.combine;
 import static com.mongodb.client.model.Updates.set;
 
 @ApplicationScoped
-public class CustomerServiceImpl extends CustomerService implements MongoConstants {
+public class CustomerServiceImpl extends CustomerService {
 
   private MongoCollection<Document> customer;
   private Boolean isPopulated = false;
