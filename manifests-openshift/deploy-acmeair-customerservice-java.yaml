@@ -29,8 +29,6 @@ spec:
           value: password
         - name: MONGO_HOST
           value: acmeair-customer-db
-        - name: SECURE_SERVICE_CALLS
-          value: 'true'
         - name: ACMEAIR_STACKAA_AUTH_URL
           value: "http://acmeair-auth-service:9080/auth"
         - name: JAEGER_AGENT_HOST
@@ -43,6 +41,8 @@ spec:
           value: 'false'
         - name: TRACE_SPEC
           value: '*=info'
+        - name: LOGGING_FORMAT
+          value: 'simple'
         readinessProbe:
           httpGet:
             path: /health
