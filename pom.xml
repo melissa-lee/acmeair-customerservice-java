@@ -7,7 +7,6 @@
    <packaging>war</packaging>
    <name>acmeair-customerservice-java</name>
    <properties>
-      <version.maven-war-plugin>3.2.2</version.maven-war-plugin>
       <version.download-maven-plugin>1.4.0</version.download-maven-plugin>
       <version.maven-surefire-plugin>3.0.0-M1</version.maven-surefire-plugin>
       <version.maven-failsafe-plugin>3.0.0-M1</version.maven-failsafe-plugin>
@@ -102,6 +101,11 @@
                <reportsDirectory>${project.build.directory}/test-reports/it</reportsDirectory>
             </configuration>
          </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.2.3</version>
+        </plugin>
       </plugins>
    </build>
    <dependencies>
