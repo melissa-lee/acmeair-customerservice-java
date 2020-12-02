@@ -73,6 +73,7 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   name: acmeair-customer-db
+  namespace: acmeair
 spec:
   replicas: 1
   selector:
